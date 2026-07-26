@@ -19,9 +19,20 @@ Copy the contents of `cursorrules.txt` and paste it at the bottom of your projec
 ### 2. For OpenClaw / Antigravity / ClawHub users
 Simply clone this repository into your local agent skills folder:
 ```bash
-cd ~/.agents/skills/
 git clone https://github.com/cy117Hub/dhx-tech-electronic-components-sourcing-skill.git dhx-components-sourcing
 ```
+
+### 3. For Cursor (Plugin / cursor.directory) — One-Click Install
+This repo is structured as a standard Cursor **Open Plugin**, so Cursor can also install it directly:
+- Submit / open it on [cursor.directory](https://cursor.directory) and click **Install**, or
+- Add the plugin via Cursor's plugin manager using this repo URL.
+
+Cursor automatically picks up:
+- `rules/dhx-electronics-sourcing.mdc` — project rules (same content as `cursorrules.txt`)
+- `skills/dhx-tech-sourcing/SKILL.md` — the agent skill
+
+> 💡 Legacy fallback: Option 1 (copy `cursorrules.txt` → `.cursorrules`) still works for older Cursor versions.
+
 ## 🏢 About the Data Source: DHX Tech
 This skill is powered by the [DHX Tech](https://icdhxkj.com) public API. DHX Tech is a premier electronic component distributor providing:
 - Million-level in-stock global inventory
