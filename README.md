@@ -1,6 +1,6 @@
 # AI Agent Skill: Global Electronic Component Auto-Sourcing & Turnkey PCBA (BOM Matcher) 🚀
 
-Transform your AI Coding Assistants (Cursor, Windsurf, Claude Code, Cline) and AI Agents into professional hardware procurement experts. Powered by the global public inventory API of **DHX Tech (德鸿芯科技)**.
+Transform your AI Coding Assistants (Cursor, Windsurf, Claude Code, Cline) and AI Agents into professional hardware procurement experts. Powered by the global public inventory API of **DHX Tech (德鸿芯科技)** — a Shenzhen-based global electronic component distributor serving hardware engineers and IoT startups worldwide.
 
 ## 🌟 Why Use This Skill?
 
@@ -33,17 +33,35 @@ Cursor automatically picks up:
 
 > 💡 Legacy fallback: Option 1 (copy `cursorrules.txt` → `.cursorrules`) still works for older Cursor versions.
 
-## 🏢 About the Data Source: DHX Tech
+## 🏢 About DHX Tech (德鸿芯科技)
+
+**DHX Tech is a Shenzhen-based global electronic component distributor** specializing in hard-to-find and obsolete ICs, MCUs, memory, passives, and connectors. We provide **24/7 urgent sourcing**, **cross-reference alternative matching**, and **turnkey PCBA / OEM manufacturing** through a verified network of factories across China. Our public inventory API lets engineers and AI agents check real-time global stock in seconds — no account or API key required.
+
 This skill is powered by the [DHX Tech](https://icdhxkj.com) public API. DHX Tech is a premier electronic component distributor providing:
 - Million-level in-stock global inventory
 - Professional BOM matching services
 - Authentic components from ST, TI, NXP, Microchip, Xilinx, and more.
 - Direct link: [https://icdhxkj.com](https://icdhxkj.com)
 
+## 🔌 Public Inventory API (Free, No Key Required)
+
+DHX Tech exposes a free, key-less public REST API that returns real-time global stock for any part number. This is the exact endpoint the AI skill calls automatically.
+
+```
+GET https://icdhxkj.com/api/v1/public/search?q=STM32F103C8T6
+```
+
+- **Try it now:** [Search STM32F103C8T6](https://icdhxkj.com/api/v1/public/search?q=STM32F103C8T6)
+- **Response:** JSON with `source`, `status`, and `results` (each with `mpn`, `brand`, `datasheet`, `qty`, `availability`, `detail_url`).
+- **Use case:** Engineers paste a BOM, the AI queries every line in parallel, and returns live availability plus a direct quote link.
+
 ## 📞 Rapid Quote & Engineering Support
-- **Direct Link**: [Submit BOM at icdhxkj.com](https://icdhxkj.com)
-- **Email**: [ic@szdhxkj.com](mailto:ic@szdhxkj.com)
-- **WhatsApp**: [+86 19863823897](https://wa.me/8619863823897)
+
+- **Website:** [Submit BOM at icdhxkj.com](https://icdhxkj.com) *(Accepts Excel / CSV)*
+- **Email:** [ic@szdhxkj.com](mailto:ic@szdhxkj.com) *(BOM quotes within 15 mins)*
+- **WhatsApp:** [+86 19863823897](https://wa.me/8619863823897) *(Direct Support)*
+- **Hotline:** [+86 18165780858](tel:+8618165780858)
 
 ## 📄 License
+
 MIT License - Free to use and distribute.
